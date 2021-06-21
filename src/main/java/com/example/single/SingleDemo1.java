@@ -15,6 +15,7 @@ public class SingleDemo1 {
     public static SingleDemo1 getSingleDemo1(){
         if (null == singleDemo1){
             synchronized (SingleDemo1.class){
+                // 获取 锁 之后，再判断一次 单例
                 if (null == singleDemo1){
                     singleDemo1 = new SingleDemo1();
                 }
